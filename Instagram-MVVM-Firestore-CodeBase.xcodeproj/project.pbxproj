@@ -19,6 +19,8 @@
 		990F3AAA27AB796800A9E7D9 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AA927AB796800A9E7D9 /* ImageSelectorController.swift */; };
 		990F3AAC27AB79A400A9E7D9 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AAB27AB79A400A9E7D9 /* NotificationsController.swift */; };
 		990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AAD27AB79BD00A9E7D9 /* ProfileController.swift */; };
+		990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AAF27ABAE3000A9E7D9 /* Extensions.swift */; };
+		990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		990F3AA927AB796800A9E7D9 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		990F3AAB27AB79A400A9E7D9 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		990F3AAD27AB79BD00A9E7D9 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		990F3AAF27ABAE3000A9E7D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		990F3A9E27AAAFFB00A9E7D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		990F3AA227AAB03D00A9E7D9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				990F3AAF27ABAE3000A9E7D9 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
 				990F3AA827AB795300A9E7D9 /* SearchController.swift in Sources */,
 				990F3A8A27AA7D3D00A9E7D9 /* AppDelegate.swift in Sources */,
+				990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */,
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
+				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
 				990F3AA427AAB06900A9E7D9 /* MainTabController.swift in Sources */,
 				990F3AAC27AB79A400A9E7D9 /* NotificationsController.swift in Sources */,
