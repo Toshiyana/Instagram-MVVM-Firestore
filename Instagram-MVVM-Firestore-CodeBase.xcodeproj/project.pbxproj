@@ -23,6 +23,7 @@
 		990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */; };
 		9913984927AC33BD001C25E0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984827AC33BD001C25E0 /* LoginController.swift */; };
 		9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984A27AC33CF001C25E0 /* RegistrationController.swift */; };
+		9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984C27ACFECA001C25E0 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		9913984827AC33BD001C25E0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9913984A27AC33CF001C25E0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		9913984C27ACFECA001C25E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */,
+				9913984C27ACFECA001C25E0 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */,
 				990F3AAA27AB796800A9E7D9 /* ImageSelectorController.swift in Sources */,
 				9913984927AC33BD001C25E0 /* LoginController.swift in Sources */,
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
