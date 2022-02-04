@@ -24,6 +24,7 @@
 		9913984927AC33BD001C25E0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984827AC33BD001C25E0 /* LoginController.swift */; };
 		9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984A27AC33CF001C25E0 /* RegistrationController.swift */; };
 		9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984C27ACFECA001C25E0 /* CustomTextField.swift */; };
+		9913984F27AD1682001C25E0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984E27AD1682001C25E0 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9913984827AC33BD001C25E0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9913984A27AC33CF001C25E0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		9913984C27ACFECA001C25E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9913984E27AD1682001C25E0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */,
 				9913984C27ACFECA001C25E0 /* CustomTextField.swift */,
+				9913984E27AD1682001C25E0 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				990F3AAC27AB79A400A9E7D9 /* NotificationsController.swift in Sources */,
 				990F3A8C27AA7D3D00A9E7D9 /* SceneDelegate.swift in Sources */,
 				9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */,
+				9913984F27AD1682001C25E0 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
