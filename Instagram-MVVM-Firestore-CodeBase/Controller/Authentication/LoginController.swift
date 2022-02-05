@@ -11,6 +11,8 @@ class LoginController: UIViewController {
     
     // MARK: - Properties
     
+    private var viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
@@ -29,21 +31,23 @@ class LoginController: UIViewController {
         return tf
     }()
     
-    private let loginButton: UIButton = {
-        let button = CustomButton(title: "Log In")
-        return button
-    }()
-    
+    // still not undestand how to set "type: .system"
 //    private let loginButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setTitle("Log In", for: .normal)
-//        button.setTitleColor(.white, for: .normal)
-//        button.backgroundColor = .purple
-//        button.layer.cornerRadius = 5
-//        button.setHeight(50)
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+//        let button = CustomButton(title: "Log In")
 //        return button
 //    }()
+    
+    private let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Log In", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemPurple.withAlphaComponent(0.5)
+        button.layer.cornerRadius = 5
+        button.setHeight(50)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.isEnabled = false
+        return button
+    }()
     
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -64,6 +68,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        configureNotificationObservers()
     }
     
     // MARK: - Actions
@@ -71,6 +76,23 @@ class LoginController: UIViewController {
     @objc func handleShowSignUp() {
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        // in this case, sender type is only UITextField, because we set "addTarget" to UITextField.
+        // using sender, we can recognize email or password
+        if sender == emailTextField {
+            viewModel.email = sender.text
+//            print("DEBUG: Eamil text is changed to \(viewModel.email)")
+        } else {
+            viewModel.password = sender.text
+//            print("DEBUG: Password text is changed to \(viewModel.password)")
+        }
+        
+        loginButton.backgroundColor = viewModel.buttonBackgroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsValid
+        
     }
     
     // MARK: - Helpers
@@ -98,6 +120,12 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    func configureNotificationObservers() {
+        // get called every time the text is changed in the textField
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 
 }

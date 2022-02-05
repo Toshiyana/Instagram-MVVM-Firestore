@@ -34,8 +34,20 @@ class RegistrationController: UIViewController {
     private let fullnameTextField = CustomTextField(placeholder: "Fullname")
     private let usernameTextField = CustomTextField(placeholder: "Username")
     
+    // still not undestand how to set "type: .system"
+//    private let signUpButton: UIButton = {
+//        let button = CustomButton(title: "Sign Up")
+//        return button
+//    }()
+    
     private let signUpButton: UIButton = {
-        let button = CustomButton(title: "Sign Up")
+        let button = UIButton(type: .system)
+        button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .purple
+        button.layer.cornerRadius = 5
+        button.setHeight(50)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         return button
     }()
     

@@ -25,6 +25,7 @@
 		9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984A27AC33CF001C25E0 /* RegistrationController.swift */; };
 		9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984C27ACFECA001C25E0 /* CustomTextField.swift */; };
 		9913984F27AD1682001C25E0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913984E27AD1682001C25E0 /* CustomButton.swift */; };
+		9913985127AD2137001C25E0 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913985027AD2137001C25E0 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9913984A27AC33CF001C25E0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		9913984C27ACFECA001C25E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9913984E27AD1682001C25E0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9913985027AD2137001C25E0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		990F3A9F27AAB00900A9E7D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9913985027AD2137001C25E0 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				9913984927AC33BD001C25E0 /* LoginController.swift in Sources */,
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
 				990F3AA827AB795300A9E7D9 /* SearchController.swift in Sources */,
+				9913985127AD2137001C25E0 /* AuthenticationViewModel.swift in Sources */,
 				990F3A8A27AA7D3D00A9E7D9 /* AppDelegate.swift in Sources */,
 				990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */,
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
