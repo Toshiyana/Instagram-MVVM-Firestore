@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
 
@@ -15,8 +16,22 @@ class MainTabController: UITabBarController {
 
         configureTabBar()
         configureViewControllers()
+        checkIfUserIsLoggedIn() // If not navigating LoginController(), you have to implemente "logout()" one time.
     }
-
+    
+    // MARK: - API
+    
+    func checkIfUserIsLoggedIn() {
+        if Auth.auth().currentUser == nil {
+            Dispatch.DispatchQueue.main.async {
+                let controller = LoginController()
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
+        }
+    }
+    
     // MARK: - Helpers
     func configureTabBar() {
         if #available(iOS 15.0, *) {
