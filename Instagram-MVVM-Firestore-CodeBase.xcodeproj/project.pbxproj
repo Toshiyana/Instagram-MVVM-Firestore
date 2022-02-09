@@ -30,6 +30,8 @@
 		9913985527AE676B001C25E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9913985427AE676A001C25E0 /* GoogleService-Info.plist */; };
 		9913985727B0F6A3001C25E0 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913985627B0F6A2001C25E0 /* ImageUploader.swift */; };
 		9913985927B0F9F7001C25E0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913985827B0F9F7001C25E0 /* AuthService.swift */; };
+		998F35B127B3BAF100D2EBAD /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B027B3BAF100D2EBAD /* ProfileCell.swift */; };
+		998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B227B3BB0100D2EBAD /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		9913985427AE676A001C25E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9913985627B0F6A2001C25E0 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		9913985827B0F9F7001C25E0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		998F35B027B3BAF100D2EBAD /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		998F35B227B3BB0100D2EBAD /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		990F3A9E27AAAFFB00A9E7D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				998F35AF27B3BACE00D2EBAD /* Profile */,
 				990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */,
 				9913984C27ACFECA001C25E0 /* CustomTextField.swift */,
 				9913984E27AD1682001C25E0 /* CustomButton.swift */,
@@ -184,6 +189,15 @@
 				9913984A27AC33CF001C25E0 /* RegistrationController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		998F35AF27B3BACE00D2EBAD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				998F35B027B3BAF100D2EBAD /* ProfileCell.swift */,
+				998F35B227B3BB0100D2EBAD /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		D9C30B16338830BC97789079 /* Pods */ = {
@@ -319,6 +333,7 @@
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
 				990F3AA827AB795300A9E7D9 /* SearchController.swift in Sources */,
 				9913985127AD2137001C25E0 /* AuthenticationViewModel.swift in Sources */,
+				998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */,
 				990F3A8A27AA7D3D00A9E7D9 /* AppDelegate.swift in Sources */,
 				990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */,
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
@@ -326,6 +341,7 @@
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
 				990F3AA427AAB06900A9E7D9 /* MainTabController.swift in Sources */,
 				990F3AAC27AB79A400A9E7D9 /* NotificationsController.swift in Sources */,
+				998F35B127B3BAF100D2EBAD /* ProfileCell.swift in Sources */,
 				990F3A8C27AA7D3D00A9E7D9 /* SceneDelegate.swift in Sources */,
 				9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */,
 				9913984F27AD1682001C25E0 /* CustomButton.swift in Sources */,
