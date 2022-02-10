@@ -36,6 +36,7 @@
 		998F35B727B4AF1C00D2EBAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B627B4AF1C00D2EBAD /* Constants.swift */; };
 		998F35B927B4B18100D2EBAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B827B4B18100D2EBAD /* User.swift */; };
 		998F35BB27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35BA27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift */; };
+		998F35BD27B4F04F00D2EBAD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35BC27B4F04F00D2EBAD /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		998F35B627B4AF1C00D2EBAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		998F35B827B4B18100D2EBAD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		998F35BA27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		998F35BC27B4F04F00D2EBAD /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				990F3AB127ABAEAC00A9E7D9 /* FeedCell.swift */,
 				9913984C27ACFECA001C25E0 /* CustomTextField.swift */,
 				9913984E27AD1682001C25E0 /* CustomButton.swift */,
+				998F35BC27B4F04F00D2EBAD /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */,
 				990F3A8A27AA7D3D00A9E7D9 /* AppDelegate.swift in Sources */,
 				990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */,
+				998F35BD27B4F04F00D2EBAD /* UserCell.swift in Sources */,
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
 				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
