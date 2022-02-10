@@ -32,6 +32,9 @@
 		9913985927B0F9F7001C25E0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913985827B0F9F7001C25E0 /* AuthService.swift */; };
 		998F35B127B3BAF100D2EBAD /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B027B3BAF100D2EBAD /* ProfileCell.swift */; };
 		998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B227B3BB0100D2EBAD /* ProfileHeader.swift */; };
+		998F35B527B4AEDB00D2EBAD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B427B4AEDB00D2EBAD /* UserService.swift */; };
+		998F35B727B4AF1C00D2EBAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B627B4AF1C00D2EBAD /* Constants.swift */; };
+		998F35B927B4B18100D2EBAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35B827B4B18100D2EBAD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		9913985827B0F9F7001C25E0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		998F35B027B3BAF100D2EBAD /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		998F35B227B3BB0100D2EBAD /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		998F35B427B4AEDB00D2EBAD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		998F35B627B4AF1C00D2EBAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		998F35B827B4B18100D2EBAD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		990F3A9D27AAAFED00A9E7D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				998F35B827B4B18100D2EBAD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 			children = (
 				9913985627B0F6A2001C25E0 /* ImageUploader.swift */,
 				9913985827B0F9F7001C25E0 /* AuthService.swift */,
+				998F35B427B4AEDB00D2EBAD /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				990F3AAF27ABAE3000A9E7D9 /* Extensions.swift */,
+				998F35B627B4AF1C00D2EBAD /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */,
+				998F35B727B4AF1C00D2EBAD /* Constants.swift in Sources */,
 				990F3AAA27AB796800A9E7D9 /* ImageSelectorController.swift in Sources */,
 				9913985727B0F6A3001C25E0 /* ImageUploader.swift in Sources */,
 				9913985927B0F9F7001C25E0 /* AuthService.swift in Sources */,
@@ -339,12 +349,14 @@
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
 				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
+				998F35B527B4AEDB00D2EBAD /* UserService.swift in Sources */,
 				990F3AA427AAB06900A9E7D9 /* MainTabController.swift in Sources */,
 				990F3AAC27AB79A400A9E7D9 /* NotificationsController.swift in Sources */,
 				998F35B127B3BAF100D2EBAD /* ProfileCell.swift in Sources */,
 				990F3A8C27AA7D3D00A9E7D9 /* SceneDelegate.swift in Sources */,
 				9913984B27AC33CF001C25E0 /* RegistrationController.swift in Sources */,
 				9913984F27AD1682001C25E0 /* CustomButton.swift in Sources */,
+				998F35B927B4B18100D2EBAD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
