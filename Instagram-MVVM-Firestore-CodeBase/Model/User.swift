@@ -14,6 +14,12 @@ struct User {
     let username: String
     let uid: String
     
+    var isFollowed = false
+    
+    var isCurrentUser: Bool {
+        return Auth.auth().currentUser?.uid == uid
+    }
+    
     init(dictionary: [String: Any]) {
         email = dictionary["email"] as? String ?? ""
         fullname = dictionary["fullname"] as? String ?? ""
