@@ -108,10 +108,14 @@ extension ProfileController: ProfileHeaderDelegate {
         if user.isCurrentUser {
             print("DEBUG: Show edit profile here..")
         } else if user.isFollowed {
-            print("DEBUG: Handle unfollow user here..")
+            UserService.follow(uid: user.uid) { error in
+                self.user.isFollowed = false
+                self.collectionView.reloadData()
+            }
         } else {
             UserService.follow(uid: user.uid) { error in
-                print("DEBUG: Handle follow user here.. Update UI.")
+                self.user.isFollowed = true
+                self.collectionView.reloadData() // call functions in CollectionViewDataSouce, especially set new user whose "isFollowd" is changed at "header.viewModel = ...", and then call configure() in "ProfileHeader.swift"
             }
         }
     }
