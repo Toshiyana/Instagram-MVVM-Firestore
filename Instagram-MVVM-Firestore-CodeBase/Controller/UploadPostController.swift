@@ -19,9 +19,11 @@ class UploadPostController: UIViewController {
         return iv
     }()
     
-    private let captionTextView: UITextView = {
-        let tv = UITextView()
-        
+    private lazy var captionTextView: InputTextView = {
+        let tv = InputTextView()
+        tv.placeholderText = "Enter caption.."
+        tv.font = UIFont.systemFont(ofSize: 16)
+        tv.delegate = self
         return tv
     }()
     
@@ -47,10 +49,16 @@ class UploadPostController: UIViewController {
     }
     
     @objc func didTapDone() {
-        
+        print("DEBUG: share")
     }
     
     // MARK: - Helpers
+    
+    func checkMaxLength(_ textView: UITextView) {
+        if textView.text.count > 100 {
+            textView.deleteBackward() // can't type anything
+        }
+    }
     
     func configureUI() {
         view.backgroundColor = .white
@@ -78,6 +86,18 @@ class UploadPostController: UIViewController {
         
         view.addSubview(characterCountLabel)
         characterCountLabel.anchor(bottom: captionTextView.bottomAnchor, right: view.rightAnchor,
-                                   paddingRight: 12)
+                                   paddingBottom: -8, paddingRight: 12)
+    }
+}
+
+// MARK: - UITextViewDelegate
+
+extension UploadPostController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        // This is the same meaning as using NotificationCenter.default.addObserver().
+        // In UITextViewDelegate, NotificationCenter.default.addObserver() is used.
+        checkMaxLength(textView)
+        let count = textView.text.count
+        characterCountLabel.text = "\(count)/100"
     }
 }
