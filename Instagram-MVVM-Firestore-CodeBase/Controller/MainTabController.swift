@@ -94,6 +94,9 @@ class MainTabController: UITabBarController {
                 guard let selectedImage = items.singlePhoto?.image else { return }
                 
                 let controller = UploadPostController()
+                controller.delegate = self
+                // you can also pass selectedImage using init() as another way, like ProfileController
+                controller.selectedImage = selectedImage
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: false, completion: nil)
@@ -137,4 +140,15 @@ extension MainTabController: UITabBarControllerDelegate {
         
         return true
     }
+}
+
+// MARK: - UploadPostControllerDelegate
+
+extension MainTabController: UploadPostControllerDelegate {
+    func controllerDidFinishUploadingPost(_ controler: UploadPostController) {
+        selectedIndex = 0
+        controler.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
