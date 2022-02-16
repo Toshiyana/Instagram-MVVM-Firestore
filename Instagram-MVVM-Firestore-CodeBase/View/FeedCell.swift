@@ -7,6 +7,15 @@
 
 import UIKit
 
+protocol FeedCellDelegate: AnyObject {
+    // use delegate
+    // becahse we can't push a new viewController onto the navigation stack from Cell.
+    // (have to push a new viewController from a viewController, not Cell)
+    
+    // in this time, we push CommentController from FeedController using delegate
+    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
+}
+
 class FeedCell: UICollectionViewCell {
     
     // MARK: - Properties
@@ -14,6 +23,8 @@ class FeedCell: UICollectionViewCell {
     var viewModel: PostViewModel? {
         didSet { configure() }
     }
+    
+    weak var delegate: FeedCellDelegate?
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -51,6 +62,7 @@ class FeedCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "comment"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTapComments), for: .touchUpInside)
         return button
     }()
     
@@ -120,6 +132,11 @@ class FeedCell: UICollectionViewCell {
     
     @objc func didTapUsername() {
         print("Debug: did tap username")
+    }
+    
+    @objc func didTapComments() {
+        guard let viewModel = viewModel else { return }
+        delegate?.cell(self, wantsToShowCommentsFor: viewModel.post)
     }
     
     // MARK: - Helpers
