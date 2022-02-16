@@ -29,12 +29,12 @@ struct User {
         username = dictionary["username"] as? String ?? ""
         uid = dictionary["uid"] as? String ?? ""
         
-        stats = UserStats(followers: 0, following: 0) // set default value, because stats type is "UserStats!", force unwrapping
+        stats = UserStats(followers: 0, following: 0, posts: 0) // set default value, because stats type is "UserStats!", force unwrapping
     }
 }
 
 struct UserStats {
     var followers: Int
     var following: Int
-//    let posts: Int
+    let posts: Int
 }
