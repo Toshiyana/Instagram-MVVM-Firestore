@@ -11,7 +11,7 @@ import UIKit
 
 struct PostService {
     
-    static func uploadPost(caption: String, image: UIImage, completion: @escaping(FirestoreCompletion)) {
+    static func uploadPost(caption: String, image: UIImage, user: User, completion: @escaping(FirestoreCompletion)) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         ImageUploader.uploadImage(image: image) { imageUrl in
@@ -19,7 +19,9 @@ struct PostService {
                                        "timestamp": Timestamp(date: Date()),
                                        "likes": 0,
                                        "imageUrl": imageUrl,
-                                       "ownerUid": uid]
+                                       "ownerUid": uid,
+                                       "ownerImageUrl": user.profileImageUrl,
+                                       "ownerUsername": user.username]
             
             COLLECTION_POSTS.addDocument(data: data, completion: completion)
         }

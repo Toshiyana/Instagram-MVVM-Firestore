@@ -95,6 +95,7 @@ class MainTabController: UITabBarController {
                 
                 let controller = UploadPostController()
                 controller.delegate = self
+                controller.currentUser = self.user
                 // you can also pass selectedImage using init() as another way, like ProfileController
                 controller.selectedImage = selectedImage
                 let nav = UINavigationController(rootViewController: controller)
