@@ -41,6 +41,8 @@
 		998F35C127B8D5DC00D2EBAD /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C027B8D5DC00D2EBAD /* UploadPostController.swift */; };
 		998F35C327B8DA5800D2EBAD /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C227B8DA5800D2EBAD /* InputTextView.swift */; };
 		998F35C527B92EE400D2EBAD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C427B92EE400D2EBAD /* PostService.swift */; };
+		998F35C727BA54C400D2EBAD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C627BA54C400D2EBAD /* Post.swift */; };
+		998F35C927BCC9E800D2EBAD /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C827BCC9E800D2EBAD /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		998F35C027B8D5DC00D2EBAD /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		998F35C227B8DA5800D2EBAD /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		998F35C427B92EE400D2EBAD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		998F35C627BA54C400D2EBAD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		998F35C827BCC9E800D2EBAD /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				998F35B827B4B18100D2EBAD /* User.swift */,
+				998F35C627BA54C400D2EBAD /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				9913985027AD2137001C25E0 /* AuthenticationViewModel.swift */,
 				998F35BA27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift */,
 				998F35BE27B5364800D2EBAD /* UserCellViewModel.swift */,
+				998F35C827BCC9E800D2EBAD /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998F35C927BCC9E800D2EBAD /* PostViewModel.swift in Sources */,
 				9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */,
 				998F35B727B4AF1C00D2EBAD /* Constants.swift in Sources */,
 				990F3AAA27AB796800A9E7D9 /* ImageSelectorController.swift in Sources */,
@@ -361,6 +368,7 @@
 				9913984927AC33BD001C25E0 /* LoginController.swift in Sources */,
 				998F35C127B8D5DC00D2EBAD /* UploadPostController.swift in Sources */,
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
+				998F35C727BA54C400D2EBAD /* Post.swift in Sources */,
 				990F3AA827AB795300A9E7D9 /* SearchController.swift in Sources */,
 				9913985127AD2137001C25E0 /* AuthenticationViewModel.swift in Sources */,
 				998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */,
