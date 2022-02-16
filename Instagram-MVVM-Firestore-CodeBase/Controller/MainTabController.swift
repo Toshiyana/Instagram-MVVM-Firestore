@@ -149,6 +149,11 @@ extension MainTabController: UploadPostControllerDelegate {
     func controllerDidFinishUploadingPost(_ controler: UploadPostController) {
         selectedIndex = 0
         controler.dismiss(animated: true, completion: nil)
+        
+        // Referesh posts after uploading a post
+        guard let feedNav = viewControllers?.first as? UINavigationController else { return }
+        guard let feed = feedNav.viewControllers.first as? FeedController else { return }
+        feed.handleRefresh()
     }
     
     
