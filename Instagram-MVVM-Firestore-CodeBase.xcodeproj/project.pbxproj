@@ -45,6 +45,7 @@
 		998F35C927BCC9E800D2EBAD /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35C827BCC9E800D2EBAD /* PostViewModel.swift */; };
 		998F35CB27BD251C00D2EBAD /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CA27BD251C00D2EBAD /* CommentController.swift */; };
 		998F35CD27BD26E200D2EBAD /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CC27BD26E200D2EBAD /* CommentCell.swift */; };
+		998F35CF27BDF34B00D2EBAD /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		998F35C827BCC9E800D2EBAD /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		998F35CA27BD251C00D2EBAD /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		998F35CC27BD26E200D2EBAD /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				9913984E27AD1682001C25E0 /* CustomButton.swift */,
 				998F35BC27B4F04F00D2EBAD /* UserCell.swift */,
 				998F35CC27BD26E200D2EBAD /* CommentCell.swift */,
+				998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998F35CF27BDF34B00D2EBAD /* CommentInputAccessoryView.swift in Sources */,
 				998F35C927BCC9E800D2EBAD /* PostViewModel.swift in Sources */,
 				9913984D27ACFECA001C25E0 /* CustomTextField.swift in Sources */,
 				998F35B727B4AF1C00D2EBAD /* Constants.swift in Sources */,
