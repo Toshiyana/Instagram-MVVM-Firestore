@@ -48,6 +48,7 @@
 		998F35CF27BDF34B00D2EBAD /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */; };
 		998F35D127BE655B00D2EBAD /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D027BE655B00D2EBAD /* CommentService.swift */; };
 		998F35D327BE741500D2EBAD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D227BE741500D2EBAD /* Comment.swift */; };
+		998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
 		998F35D027BE655B00D2EBAD /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		998F35D227BE741500D2EBAD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				998F35BA27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift */,
 				998F35BE27B5364800D2EBAD /* UserCellViewModel.swift */,
 				998F35C827BCC9E800D2EBAD /* PostViewModel.swift */,
+				998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				998F35C327B8DA5800D2EBAD /* InputTextView.swift in Sources */,
 				998F35BD27B4F04F00D2EBAD /* UserCell.swift in Sources */,
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
+				998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */,
 				998F35BF27B5364800D2EBAD /* UserCellViewModel.swift in Sources */,
 				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
