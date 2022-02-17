@@ -18,6 +18,7 @@ class CommentController: UICollectionViewController {
         // because we access "view(.frame.width)" which is made after viewDidLoad()
         let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
         let cv = CommentInputAccessoryView(frame: frame)
+        cv.delegate = self // for CommentInputAccessoryViewDelegate
         return cv
     }()
     
@@ -81,5 +82,14 @@ extension CommentController {
 extension CommentController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 80)
+    }
+}
+
+// MARK: - CommentInputAccessoryViewDelegate
+
+extension CommentController: CommentInputAccessoryViewDelegate {
+    func inputView(_ inputView: CommentInputAccessoryView, wantsToUploadComment comment: String) {
+        print("DEBUG: \(comment)")
+        inputView.clearCommentTextView()
     }
 }

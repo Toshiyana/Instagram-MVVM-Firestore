@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol CommentInputAccessoryViewDelegate: AnyObject {
+    func inputView(_ inputView: CommentInputAccessoryView, wantsToUploadComment comment: String)
+}
+
 class CommentInputAccessoryView: UIView {
     
     // MARK: - Properties
+    
+    weak var delegate: CommentInputAccessoryViewDelegate?
     
     private let commentTextView: InputTextView = {
         let tv = InputTextView()
@@ -63,6 +69,13 @@ class CommentInputAccessoryView: UIView {
     // MARK: - Actions
     
     @objc func handlePostTapped() {
-        
+        delegate?.inputView(self, wantsToUploadComment: commentTextView.text)
+    }
+    
+    // MARK: - Helpers
+    
+    func clearCommentTextView() {
+        commentTextView.text = nil
+        commentTextView.placeholderLabel.isHighlighted = false
     }
 }
