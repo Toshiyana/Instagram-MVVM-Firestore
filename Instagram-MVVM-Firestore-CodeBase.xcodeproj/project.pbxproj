@@ -46,6 +46,7 @@
 		998F35CB27BD251C00D2EBAD /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CA27BD251C00D2EBAD /* CommentController.swift */; };
 		998F35CD27BD26E200D2EBAD /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CC27BD26E200D2EBAD /* CommentCell.swift */; };
 		998F35CF27BDF34B00D2EBAD /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */; };
+		998F35D127BE655B00D2EBAD /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D027BE655B00D2EBAD /* CommentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		998F35CA27BD251C00D2EBAD /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		998F35CC27BD26E200D2EBAD /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
+		998F35D027BE655B00D2EBAD /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				9913985827B0F9F7001C25E0 /* AuthService.swift */,
 				998F35B427B4AEDB00D2EBAD /* UserService.swift */,
 				998F35C427B92EE400D2EBAD /* PostService.swift */,
+				998F35D027BE655B00D2EBAD /* CommentService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				998F35CB27BD251C00D2EBAD /* CommentController.swift in Sources */,
 				990F3A8E27AA7D3D00A9E7D9 /* ViewController.swift in Sources */,
 				998F35C727BA54C400D2EBAD /* Post.swift in Sources */,
+				998F35D127BE655B00D2EBAD /* CommentService.swift in Sources */,
 				990F3AA827AB795300A9E7D9 /* SearchController.swift in Sources */,
 				9913985127AD2137001C25E0 /* AuthenticationViewModel.swift in Sources */,
 				998F35CD27BD26E200D2EBAD /* CommentCell.swift in Sources */,
