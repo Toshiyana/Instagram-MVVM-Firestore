@@ -16,6 +16,7 @@ struct Post {
     let timestamp: Timestamp
     let ownerImageUrl: String
     let ownerUsername: String
+    var didLike = false // same logic with isFollowed in User.swift
     
     init(postId: String, dictionary: [String: Any]) {
         self.postId = postId
