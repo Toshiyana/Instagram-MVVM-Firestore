@@ -47,6 +47,7 @@
 		998F35CD27BD26E200D2EBAD /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CC27BD26E200D2EBAD /* CommentCell.swift */; };
 		998F35CF27BDF34B00D2EBAD /* CommentInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */; };
 		998F35D127BE655B00D2EBAD /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D027BE655B00D2EBAD /* CommentService.swift */; };
+		998F35D327BE741500D2EBAD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D227BE741500D2EBAD /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		998F35CC27BD26E200D2EBAD /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccessoryView.swift; sourceTree = "<group>"; };
 		998F35D027BE655B00D2EBAD /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		998F35D227BE741500D2EBAD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				998F35B827B4B18100D2EBAD /* User.swift */,
 				998F35C627BA54C400D2EBAD /* Post.swift */,
+				998F35D227BE741500D2EBAD /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				990F3AAA27AB796800A9E7D9 /* ImageSelectorController.swift in Sources */,
 				9913985727B0F6A3001C25E0 /* ImageUploader.swift in Sources */,
 				9913985927B0F9F7001C25E0 /* AuthService.swift in Sources */,
+				998F35D327BE741500D2EBAD /* Comment.swift in Sources */,
 				998F35BB27B4BA0200D2EBAD /* ProfileHeaderViewModel.swift in Sources */,
 				9913984927AC33BD001C25E0 /* LoginController.swift in Sources */,
 				998F35C127B8D5DC00D2EBAD /* UploadPostController.swift in Sources */,
