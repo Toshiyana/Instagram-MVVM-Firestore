@@ -14,7 +14,10 @@ class FeedController: UICollectionViewController {
     
     // MARK: - Properties
     
-    private var posts = [Post]()
+    private var posts = [Post]() {
+        didSet { collectionView.reloadData() } // for setting didLike property
+        // by calling reloadData(), set new viewModel in FeedCell
+    }
     
     var post: Post? // show only one post selected from Profile
 
@@ -53,8 +56,23 @@ class FeedController: UICollectionViewController {
         
         PostService.fetchPosts { posts in
             self.posts = posts
+            
+            self.checkIfUserLikedPosts()
+            
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.reloadData()
+            
+        }
+    }
+    
+    func checkIfUserLikedPosts() {
+        posts.forEach { post in
+            PostService.checkIfUserLikePost(post: post) { didLike in
+                // set true to "didLike" in posts order（early timestamp order)
+                if let index = self.posts.firstIndex(where: { $0.postId == post.postId }) {
+                    // after setting true, call collectionView.reloadData() because of posts didSet
+                    self.posts[index].didLike = didLike
+                }
+            }
         }
     }
 
@@ -132,11 +150,13 @@ extension FeedController: FeedCellDelegate {
             PostService.unlikePost(post: post) { error in
                 cell.likeButton.setImage(UIImage(named: "like_unselected"), for: .normal)
                 cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes = post.likes - 1
             }
         } else {
             PostService.likePost(post: post) { error in
                 cell.likeButton.setImage(UIImage(named: "like_selected"), for: .normal)
                 cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes = post.likes + 1
             }
         }
     }
