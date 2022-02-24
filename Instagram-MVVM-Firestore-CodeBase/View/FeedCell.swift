@@ -141,7 +141,7 @@ class FeedCell: UICollectionViewCell {
     
     // MARK: - Actions
     
-    @objc func showUserProfile() {
+    @objc func showUserProfile() {
         guard let viewModel = viewModel else { return }
         delegate?.cell(self, wantsToShowProfileFor: viewModel.post.ownerUid)
     }
