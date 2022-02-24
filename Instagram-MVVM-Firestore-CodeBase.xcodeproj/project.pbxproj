@@ -49,6 +49,7 @@
 		998F35D127BE655B00D2EBAD /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D027BE655B00D2EBAD /* CommentService.swift */; };
 		998F35D327BE741500D2EBAD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D227BE741500D2EBAD /* Comment.swift */; };
 		998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */; };
+		998F35D727C7846600D2EBAD /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D627C7846600D2EBAD /* NotificationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		998F35D027BE655B00D2EBAD /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		998F35D227BE741500D2EBAD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		998F35D627C7846600D2EBAD /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				998F35BC27B4F04F00D2EBAD /* UserCell.swift */,
 				998F35CC27BD26E200D2EBAD /* CommentCell.swift */,
 				998F35CE27BDF34B00D2EBAD /* CommentInputAccessoryView.swift */,
+				998F35D627C7846600D2EBAD /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				990F3AA627AB794100A9E7D9 /* FeedController.swift in Sources */,
 				998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */,
 				998F35BF27B5364800D2EBAD /* UserCellViewModel.swift in Sources */,
+				998F35D727C7846600D2EBAD /* NotificationCell.swift in Sources */,
 				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
 				998F35C527B92EE400D2EBAD /* PostService.swift in Sources */,
