@@ -50,6 +50,7 @@
 		998F35D327BE741500D2EBAD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D227BE741500D2EBAD /* Comment.swift */; };
 		998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */; };
 		998F35D727C7846600D2EBAD /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D627C7846600D2EBAD /* NotificationCell.swift */; };
+		998F35DB27D5CA5F00D2EBAD /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35DA27D5CA5E00D2EBAD /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		998F35D227BE741500D2EBAD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		998F35D627C7846600D2EBAD /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		998F35DA27D5CA5E00D2EBAD /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				998F35B827B4B18100D2EBAD /* User.swift */,
 				998F35C627BA54C400D2EBAD /* Post.swift */,
 				998F35D227BE741500D2EBAD /* Comment.swift */,
+				998F35DA27D5CA5E00D2EBAD /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				998F35CD27BD26E200D2EBAD /* CommentCell.swift in Sources */,
 				998F35B327B3BB0100D2EBAD /* ProfileHeader.swift in Sources */,
 				990F3A8A27AA7D3D00A9E7D9 /* AppDelegate.swift in Sources */,
+				998F35DB27D5CA5F00D2EBAD /* Notification.swift in Sources */,
 				990F3AB227ABAEAC00A9E7D9 /* FeedCell.swift in Sources */,
 				998F35C327B8DA5800D2EBAD /* InputTextView.swift in Sources */,
 				998F35BD27B4F04F00D2EBAD /* UserCell.swift in Sources */,
