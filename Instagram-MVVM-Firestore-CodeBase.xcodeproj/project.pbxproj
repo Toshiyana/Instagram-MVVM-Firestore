@@ -51,6 +51,7 @@
 		998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */; };
 		998F35D727C7846600D2EBAD /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35D627C7846600D2EBAD /* NotificationCell.swift */; };
 		998F35DB27D5CA5F00D2EBAD /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35DA27D5CA5E00D2EBAD /* Notification.swift */; };
+		998F35DD27D5DC4D00D2EBAD /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F35DC27D5DC4D00D2EBAD /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		998F35D427BE7F8C00D2EBAD /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		998F35D627C7846600D2EBAD /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		998F35DA27D5CA5E00D2EBAD /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		998F35DC27D5DC4D00D2EBAD /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				998F35B427B4AEDB00D2EBAD /* UserService.swift */,
 				998F35C427B92EE400D2EBAD /* PostService.swift */,
 				998F35D027BE655B00D2EBAD /* CommentService.swift */,
+				998F35DC27D5DC4D00D2EBAD /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				998F35D527BE7F8C00D2EBAD /* CommentViewModel.swift in Sources */,
 				998F35BF27B5364800D2EBAD /* UserCellViewModel.swift in Sources */,
 				998F35D727C7846600D2EBAD /* NotificationCell.swift in Sources */,
+				998F35DD27D5DC4D00D2EBAD /* NotificationService.swift in Sources */,
 				990F3AB027ABAE3000A9E7D9 /* Extensions.swift in Sources */,
 				990F3AAE27AB79BD00A9E7D9 /* ProfileController.swift in Sources */,
 				998F35C527B92EE400D2EBAD /* PostService.swift in Sources */,
