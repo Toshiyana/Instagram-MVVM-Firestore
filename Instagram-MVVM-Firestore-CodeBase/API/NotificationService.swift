@@ -26,6 +26,7 @@ struct NotificationService {
                                    "userProfileImageUrl": fromUser.profileImageUrl,
                                    "username": fromUser.username]
         
+        // when "type" param is not ".like", don't have "post" param
         if let post = post {
             data["postId"] = post.postId
             data["postImageUrl"] = post.imageUrl
