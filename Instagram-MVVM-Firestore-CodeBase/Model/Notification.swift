@@ -26,6 +26,8 @@ struct Notification {
     let uid: String
     let postId: String?
     let postImageUrl: String?
+    let userProfileImageUrl: String
+    let username: String
     let timestamp: Timestamp
     let type: NotificationType
     
@@ -34,6 +36,8 @@ struct Notification {
         uid = dictionary["uid"] as? String ?? ""
         postId = dictionary["postId"] as? String ?? ""
         postImageUrl = dictionary["postImageUrl"] as? String ?? ""
+        userProfileImageUrl = dictionary["userProfileImageUrl"] as? String ?? ""
+        username = dictionary["username"] as? String ?? ""
         timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
         type = NotificationType(rawValue: dictionary["type"] as? Int ?? 0) ?? .like
     }
