@@ -30,6 +30,7 @@ struct Notification {
     let username: String
     let timestamp: Timestamp
     let type: NotificationType
+    var userIsFollowed = false
     
     init(dictionary: [String: Any]) {
         id = dictionary["id"] as? String ?? ""
