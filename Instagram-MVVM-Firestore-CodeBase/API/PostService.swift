@@ -115,7 +115,7 @@ struct PostService {
         }
     }
     
-    static func updateUserFeedAfterFollowing(user: User) {
+    static func updateUserFeedAfterFollowing(user: User, didFollow: Bool) {
         // This is not best way to get Feed following.
         // you can improve with full code on shop. (use cloud fuction)
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -127,8 +127,12 @@ struct PostService {
             let docIDs = documents.map({ $0.documentID })
 
             docIDs.forEach { id in
-                // Saving all id of feed following as array is not good.
-                COLLECTION_USERS.document(uid).collection("user-feed").document(id).setData([:])
+                if didFollow {
+                    // Saving all id of feed following as array is not good.
+                    COLLECTION_USERS.document(uid).collection("user-feed").document(id).setData([:])
+                } else {
+                    COLLECTION_USERS.document(uid).collection("user-feed").document(id).delete()
+                }
             }
         }
     }

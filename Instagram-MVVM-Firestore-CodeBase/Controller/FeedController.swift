@@ -34,6 +34,7 @@ class FeedController: UICollectionViewController {
     @objc func handleRefresh() {
         posts.removeAll()
         fetchPosts()
+        collectionView.refreshControl?.endRefreshing()
     }
     
     @objc func handleLogout() {
@@ -52,7 +53,9 @@ class FeedController: UICollectionViewController {
     // MARK: - API
     
     func fetchPosts() {
-        guard post == nil else { return } // if not nill, don't have to fetch posts because post was selected from Profile
+        guard post == nil else {
+            return
+        } // if not nill, don't have to fetch posts because post was selected from Profile
         
 //        PostService.fetchPosts { posts in
 //            self.posts = posts
@@ -63,7 +66,6 @@ class FeedController: UICollectionViewController {
         PostService.fetchFeedPosts { posts in
             self.posts = posts
             self.checkIfUserLikedPosts()
-            self.collectionView.refreshControl?.endRefreshing()
         }
     }
     
