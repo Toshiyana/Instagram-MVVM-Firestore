@@ -100,4 +100,36 @@ struct PostService {
                 completion(didLike)
             }
     }
+    
+    static func fetchFeedPosts(completion: @escaping([Post]) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        var posts = [Post]()
+        
+        COLLECTION_USERS.document(uid).collection("user-feed").getDocuments { snapshot, error in
+            snapshot?.documents.forEach({ document in
+                fetchPost(withPostId: document.documentID) { post in
+                    posts.append(post)
+                    completion(posts)
+                }
+            })
+        }
+    }
+    
+    static func updateUserFeedAfterFollowing(user: User) {
+        // This is not best way to get Feed following.
+        // you can improve with full code on shop. (use cloud fuction)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let query = COLLECTION_POSTS.whereField("ownerUid", isEqualTo: user.uid)
+        query.getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else { return }
+            
+            let docIDs = documents.map({ $0.documentID })
+
+            docIDs.forEach { id in
+                // Saving all id of feed following as array is not good.
+                COLLECTION_USERS.document(uid).collection("user-feed").document(id).setData([:])
+            }
+        }
+    }
 }

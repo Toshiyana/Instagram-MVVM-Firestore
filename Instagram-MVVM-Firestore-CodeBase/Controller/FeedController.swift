@@ -54,13 +54,16 @@ class FeedController: UICollectionViewController {
     func fetchPosts() {
         guard post == nil else { return } // if not nill, don't have to fetch posts because post was selected from Profile
         
-        PostService.fetchPosts { posts in
+//        PostService.fetchPosts { posts in
+//            self.posts = posts
+//            self.checkIfUserLikedPosts()
+//            self.collectionView.refreshControl?.endRefreshing()
+//        }
+        
+        PostService.fetchFeedPosts { posts in
             self.posts = posts
-            
             self.checkIfUserLikedPosts()
-            
             self.collectionView.refreshControl?.endRefreshing()
-            
         }
     }
     
