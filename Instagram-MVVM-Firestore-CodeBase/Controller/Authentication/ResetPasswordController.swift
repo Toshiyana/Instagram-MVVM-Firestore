@@ -25,6 +25,8 @@ class ResetPasswordController: UIViewController {
         return tf
     }()
     
+    var email: String?
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
@@ -94,6 +96,8 @@ class ResetPasswordController: UIViewController {
     func configureUI() {
         configureGradientLayer()
         
+        configureEmailFromLogin()
+        
         view.addSubview(backButton)
         backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
                           paddingTop: 16, paddingLeft: 16)
@@ -115,6 +119,12 @@ class ResetPasswordController: UIViewController {
     func configureNotificationObservers() {
         // get called every time the text is changed in the textField
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
+    func configureEmailFromLogin() {
+        emailTextField.text = email
+        viewModel.email = email
+        updateForm()
     }
 }
 
