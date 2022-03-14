@@ -19,7 +19,9 @@ class FeedController: UICollectionViewController {
         // by calling reloadData(), set new viewModel in FeedCell
     }
     
-    var post: Post? // show only one post selected from Profile
+    var post: Post? {
+        didSet { collectionView.reloadData() }
+    } // show only one post selected from Profile
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -27,6 +29,10 @@ class FeedController: UICollectionViewController {
         
         configureUI()
         fetchPosts()
+        
+        if post != nil {
+            checkIfUserLikedPosts()
+        }
     }
     
     // MARK: - Actions
@@ -70,12 +76,19 @@ class FeedController: UICollectionViewController {
     }
     
     func checkIfUserLikedPosts() {
-        posts.forEach { post in
+        if let post = post {
+            // when accsessing Feed from Profile, show only one post
             PostService.checkIfUserLikePost(post: post) { didLike in
-                // set true to "didLike" in posts order（early timestamp order)
-                if let index = self.posts.firstIndex(where: { $0.postId == post.postId }) {
-                    // after setting true, call collectionView.reloadData() because of posts didSet
-                    self.posts[index].didLike = didLike
+                self.post?.didLike = didLike
+            }
+        } else {
+            posts.forEach { post in
+                PostService.checkIfUserLikePost(post: post) { didLike in
+                    // set true to "didLike" in posts order（early timestamp order)
+                    if let index = self.posts.firstIndex(where: { $0.postId == post.postId }) {
+                        // after setting true, call collectionView.reloadData() because of posts didSet
+                        self.posts[index].didLike = didLike
+                    }
                 }
             }
         }
