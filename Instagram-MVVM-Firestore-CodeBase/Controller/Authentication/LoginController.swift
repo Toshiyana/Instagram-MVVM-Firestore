@@ -104,10 +104,8 @@ class LoginController: UIViewController {
         // using sender, we can recognize email or password
         if sender == emailTextField {
             viewModel.email = sender.text
-//            print("DEBUG: Eamil text is changed to \(viewModel.email)")
         } else {
             viewModel.password = sender.text
-//            print("DEBUG: Password text is changed to \(viewModel.password)")
         }
         
         updateForm()
@@ -115,6 +113,7 @@ class LoginController: UIViewController {
     
     @objc func handleShowResetPassword() {
         let controller = ResetPasswordController()
+        controller.delegate = self
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -153,10 +152,22 @@ class LoginController: UIViewController {
 
 }
 
+// MARK: - FormViewModel
+
 extension LoginController: FormViewModel {
     func updateForm() {
         loginButton.backgroundColor = viewModel.buttonBackgroundColor
         loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         loginButton.isEnabled = viewModel.formIsValid
+    }
+}
+
+// MARK: - ResetPasswordControllerDelegate
+
+extension LoginController: ResetPasswordControllerDelegate {
+    func controllerDidSendResetPasswordLink(_ controller: ResetPasswordController) {
+        navigationController?.popViewController(animated: true)
+        showMessage(withTitle: "Success",
+                    message: "We sent a link to your email to reset your password")
     }
 }

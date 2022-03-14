@@ -7,11 +7,24 @@
 
 import UIKit
 
+protocol ResetPasswordControllerDelegate: AnyObject {
+    func controllerDidSendResetPasswordLink(_ controller: ResetPasswordController)
+}
+
 class ResetPasswordController: UIViewController {
     
     // MARK: - Properties
     
-    private let emailTextField = CustomTextField(placeholder: "Email")
+    weak var delegate: ResetPasswordControllerDelegate?
+    
+    private var viewModel = ResetPasswordViewModel()
+    
+    private let emailTextField: UITextField = {
+        let tf = CustomTextField(placeholder: "Email")
+        tf.keyboardType = .emailAddress
+        return tf
+    }()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: UIImage(named: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
@@ -45,16 +58,35 @@ class ResetPasswordController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
+        configureNotificationObservers()
     }
     
     // MARK: - Actions
     
     @objc func handleResetPassword() {
+        guard let email = emailTextField.text else { return }
         
+        showLoader(true)
+        AuthService.resetPassword(withEmail: email) { error in
+            if let error = error {
+                self.showMessage(withTitle: "Error", message: error.localizedDescription)
+                self.showLoader(false)
+                return
+            }
+            self.delegate?.controllerDidSendResetPasswordLink(self)
+        }
     }
     
     @objc func handleDismissal() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        
+        updateForm()
     }
     
     // MARK: - Helpers
@@ -78,5 +110,20 @@ class ResetPasswordController: UIViewController {
         view.addSubview(stack)
         stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
                      paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+    }
+    
+    func configureNotificationObservers() {
+        // get called every time the text is changed in the textField
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+}
+
+// MARK: - FormViewModel
+
+extension ResetPasswordController: FormViewModel {
+    func updateForm() {
+        resetPasswordButton.backgroundColor = viewModel.buttonBackgroundColor
+        resetPasswordButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        resetPasswordButton.isEnabled = viewModel.formIsValid
     }
 }
